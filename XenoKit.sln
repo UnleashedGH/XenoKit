@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XenoKit", "XenoKit\XenoKit.csproj", "{EC0439B3-1030-46A1-9321-86C27B1243B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xv2CoreLib", "..\XV2 Tools\Xv2CoreLib\Xv2CoreLib.csproj", "{FDB88E51-0D73-47B9-A342-E574EC0BA583}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xv2CoreLib", "..\XV2-Tools\Xv2CoreLib\Xv2CoreLib.csproj", "{FDB88E51-0D73-47B9-A342-E574EC0BA583}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LB_Common", "..\XV2 Tools\LB_Common\LB_Common.csproj", "{513B1851-4576-45EC-8F8E-400A38B05502}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LB_Common", "..\XV2-Tools\LB_Common\LB_Common.csproj", "{513B1851-4576-45EC-8F8E-400A38B05502}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C9C2EAB0-46E5-4F8F-A7DE-DF9F3DD9E964}"
 	ProjectSection(SolutionItems) = preProject

@@ -70,19 +70,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AForge">
-      <HintPath>..\..\XV2 Tools\DLLs\AForge.dll</HintPath>
+      <HintPath>..\..\XV2-Tools\DLLs\AForge.dll</HintPath>
     </Reference>
     <Reference Include="AForge.Imaging">
-      <HintPath>..\..\XV2 Tools\DLLs\AForge.Imaging.dll</HintPath>
+      <HintPath>..\..\XV2-Tools\DLLs\AForge.Imaging.dll</HintPath>
     </Reference>
     <Reference Include="AForge.Imaging.Formats">
-      <HintPath>..\..\XV2 Tools\DLLs\AForge.Imaging.Formats.dll</HintPath>
+      <HintPath>..\..\XV2-Tools\DLLs\AForge.Imaging.Formats.dll</HintPath>
     </Reference>
     <Reference Include="AForge.Math">
-      <HintPath>..\..\XV2 Tools\DLLs\AForge.Math.dll</HintPath>
+      <HintPath>..\..\XV2-Tools\DLLs\AForge.Math.dll</HintPath>
     </Reference>
     <Reference Include="AutoUpdater">
-      <HintPath>..\..\XV2 Tools\DLLs\AutoUpdater.dll</HintPath>
+      <HintPath>..\..\XV2-Tools\DLLs\AutoUpdater.dll</HintPath>
     </Reference>
     <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.2.0.2\lib\net47\CommonServiceLocator.dll</HintPath>
@@ -219,7 +219,7 @@
     </Reference>
     <Reference Include="System.Half, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\XV2 Tools\DLLs\System.Half.dll</HintPath>
+      <HintPath>..\..\XV2-Tools\DLLs\System.Half.dll</HintPath>
     </Reference>
     <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
@@ -324,7 +324,7 @@
     </Reference>
     <Reference Include="YAXLib, Version=2.15.0.0, Culture=neutral, PublicKeyToken=15c43682c986900f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\XV2 Tools\DLLs\YAXLib.dll</HintPath>
+      <HintPath>..\..\XV2-Tools\DLLs\YAXLib.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -332,202 +332,202 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="..\..\XV2 Tools\AudioCueEditor\Audio\AudioFormat.cs">
+    <Compile Include="..\..\XV2-Tools\AudioCueEditor\Audio\AudioFormat.cs">
       <Link>Views\ACE\Audio\AudioFormat.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\AudioCueEditor\Audio\AudioPlayer.cs">
+    <Compile Include="..\..\XV2-Tools\AudioCueEditor\Audio\AudioPlayer.cs">
       <Link>Views\ACE\Audio\AudioPlayer.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\AudioCueEditor\Audio\Helper.cs">
+    <Compile Include="..\..\XV2-Tools\AudioCueEditor\Audio\Helper.cs">
       <Link>Views\ACE\Audio\Helper.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\AudioCueEditor\Audio\LoopStream.cs">
+    <Compile Include="..\..\XV2-Tools\AudioCueEditor\Audio\LoopStream.cs">
       <Link>Views\ACE\Audio\LoopStream.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\AudioCueEditor\Audio\WavStream.cs">
+    <Compile Include="..\..\XV2-Tools\AudioCueEditor\Audio\WavStream.cs">
       <Link>Views\ACE\Audio\WavStream.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\AudioCueEditor\Data\HcaEncryptionKeys.cs">
+    <Compile Include="..\..\XV2-Tools\AudioCueEditor\Data\HcaEncryptionKeys.cs">
       <Link>Views\ACE\Data\HcaEncryptionKeys.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\AudioCueEditor\ViewModel\MainViewModel.cs">
+    <Compile Include="..\..\XV2-Tools\AudioCueEditor\ViewModel\MainViewModel.cs">
       <Link>Views\ACE\ViewModel\MainViewModel.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\AudioCueEditor\ViewModel\ViewModelLocator.cs">
+    <Compile Include="..\..\XV2-Tools\AudioCueEditor\ViewModel\ViewModelLocator.cs">
       <Link>Views\ACE\ViewModel\ViewModelLocator.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\AudioCueEditor\View\AddCueForm.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\AudioCueEditor\View\AddCueForm.xaml.cs">
       <Link>Views\ACE\View\AddCueForm.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\AudioCueEditor\View\AddTrackForm.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\AudioCueEditor\View\AddTrackForm.xaml.cs">
       <Link>Views\ACE\View\AddTrackForm.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\AudioCueEditor\View\CueEditorView.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\AudioCueEditor\View\CueEditorView.xaml.cs">
       <Link>Views\ACE\View\CueEditorView.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\AudioCueEditor\View\EditCueLimit.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\AudioCueEditor\View\EditCueLimit.xaml.cs">
       <Link>Views\ACE\View\EditCueLimit.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\AudioCueEditor\View\EditLoopForm.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\AudioCueEditor\View\EditLoopForm.xaml.cs">
       <Link>Views\ACE\View\EditLoopForm.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\AudioCueEditor\View\EditVolume.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\AudioCueEditor\View\EditVolume.xaml.cs">
       <Link>Views\ACE\View\EditVolume.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\AudioCueEditor\View\VolumeControl.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\AudioCueEditor\View\VolumeControl.xaml.cs">
       <Link>Views\ACE\View\VolumeControl.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Extensions\EMB\EmbExtensions.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Extensions\EMB\EmbExtensions.cs">
       <Link>Extensions\EmbExtensions.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Forms\AssetContainerSettings.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Forms\AssetContainerSettings.xaml.cs">
       <Link>Views\EEPK Organiser\Forms\AssetContainerSettings.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Forms\AssetSelector.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Forms\AssetSelector.xaml.cs">
       <Link>Views\EEPK Organiser\Forms\AssetSelector.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Forms\Editors\EcfEditorWindow.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Forms\Editors\EcfEditorWindow.xaml.cs">
       <Link>Views\EEPK Organiser\Forms\Editors\EcfEditorWindow.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Forms\Editors\EmbEditForm.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Forms\Editors\EmbEditForm.xaml.cs">
       <Link>Views\EEPK Organiser\Forms\Editors\EmbEditForm.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Forms\Editors\EmpEditorWindow.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Forms\Editors\EmpEditorWindow.xaml.cs">
       <Link>Views\EEPK Organiser\Forms\Editors\EmpEditorWindow.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Forms\Editors\EtrEditorWindow.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Forms\Editors\EtrEditorWindow.xaml.cs">
       <Link>Views\EEPK Organiser\Forms\Editors\EtrEditorWindow.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Forms\Editors\MaterialsEditorForm.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Forms\Editors\MaterialsEditorForm.xaml.cs">
       <Link>Views\EEPK Organiser\Forms\Editors\MaterialsEditorForm.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Forms\EffectSelector.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Forms\EffectSelector.xaml.cs">
       <Link>Views\EEPK Organiser\Forms\EffectSelector.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Forms\EntitySelector.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Forms\EntitySelector.xaml.cs">
       <Link>Views\EEPK Organiser\Forms\EntitySelector.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Forms\EtrScale.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Forms\EtrScale.xaml.cs">
       <Link>Views\EEPK Organiser\Forms\EtrScale.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Forms\LogForm.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Forms\LogForm.xaml.cs">
       <Link>Views\EEPK Organiser\Forms\LogForm.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Forms\LogPrompt.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Forms\LogPrompt.xaml.cs">
       <Link>Views\EEPK Organiser\Forms\LogPrompt.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Forms\Recolor\RecolorAll.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Forms\Recolor\RecolorAll.xaml.cs">
       <Link>Views\EEPK Organiser\Forms\Recolor\RecolorAll.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Forms\Recolor\RecolorAll_HueSet.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Forms\Recolor\RecolorAll_HueSet.xaml.cs">
       <Link>Views\EEPK Organiser\Forms\Recolor\RecolorAll_HueSet.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Forms\Recolor\RecolorTexture_HueSet.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Forms\Recolor\RecolorTexture_HueSet.xaml.cs">
       <Link>Views\EEPK Organiser\Forms\Recolor\RecolorTexture_HueSet.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Forms\Recolor\TextureEditHueChange.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Forms\Recolor\TextureEditHueChange.xaml.cs">
       <Link>Views\EEPK Organiser\Forms\Recolor\TextureEditHueChange.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Forms\RenameForm.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Forms\RenameForm.xaml.cs">
       <Link>Views\EEPK Organiser\Forms\RenameForm.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Misc\CacheManager.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Misc\CacheManager.cs">
       <Link>Views\EEPK Organiser\Misc\CacheManager.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Misc\ClipboardDataTypes.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Misc\ClipboardDataTypes.cs">
       <Link>Views\EEPK Organiser\Misc\ClipboardDataTypes.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Misc\InputValidation.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Misc\InputValidation.cs">
       <Link>Views\EEPK Organiser\Misc\InputValidation.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Misc\LoadFromGameHelper.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Misc\LoadFromGameHelper.cs">
       <Link>Views\EEPK Organiser\Misc\LoadFromGameHelper.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Name\Namelist.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Name\Namelist.cs">
       <Link>Views\EEPK Organiser\Names\Namelist.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\Name\NameListManager.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\Name\NameListManager.cs">
       <Link>Views\EEPK Organiser\Names\NameListManager.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\ViewModel\AssetContainerViewModel.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\ViewModel\AssetContainerViewModel.cs">
       <Link>Views\EEPK Organiser\ViewModel\AssetContainerViewModel.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\ViewModel\EcfNodeViewModel.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\ViewModel\EcfNodeViewModel.cs">
       <Link>Views\EEPK Organiser\ViewModel\EcfNodeViewModel.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\ViewModel\EffectPartViewModel.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\ViewModel\EffectPartViewModel.cs">
       <Link>Views\EEPK Organiser\ViewModel\EffectPartViewModel.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\ViewModel\EmpKeyframesViewModel.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\ViewModel\EmpKeyframesViewModel.cs">
       <Link>Views\EEPK Organiser\ViewModel\EmpKeyframesViewModel.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\ViewModel\EmpNodeViewModel.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\ViewModel\EmpNodeViewModel.cs">
       <Link>Views\EEPK Organiser\ViewModel\EmpNodeViewModel.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\ViewModel\EmpTextureViewModel.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\ViewModel\EmpTextureViewModel.cs">
       <Link>Views\EEPK Organiser\ViewModel\EmpTextureViewModel.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\ViewModel\EtrNodeViewModel.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\ViewModel\EtrNodeViewModel.cs">
       <Link>Views\EEPK Organiser\ViewModel\EtrNodeViewModel.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\ViewModel\MaterialViewModel.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\ViewModel\MaterialViewModel.cs">
       <Link>Views\EEPK Organiser\ViewModel\MaterialViewModel.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\View\Controls\ShapeDraw.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\View\Controls\ShapeDraw.xaml.cs">
       <Link>Views\EEPK Organiser\View\Controls\ShapeDraw.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\View\Editors\EcfEditor.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\View\Editors\EcfEditor.xaml.cs">
       <Link>Views\EEPK Organiser\View\Editors\EcfEditor.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\View\Editors\EmpEditor.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\View\Editors\EmpEditor.xaml.cs">
       <Link>Views\EEPK Organiser\View\Editors\EmpEditor.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\View\Editors\EMP\EmpKeyframesView.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\View\Editors\EMP\EmpKeyframesView.xaml.cs">
       <Link>Views\EEPK Organiser\View\Editors\EMP\EmpKeyframesView.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\View\Editors\EMP\EmpKeyframeView.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\View\Editors\EMP\EmpKeyframeView.xaml.cs">
       <Link>Views\EEPK Organiser\View\Editors\EMP\EmpKeyframeView.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\View\Editors\EMP\EmpModifiersView.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\View\Editors\EMP\EmpModifiersView.xaml.cs">
       <Link>Views\EEPK Organiser\View\Editors\EMP\EmpModifiersView.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\View\Editors\EMP\EmpNodeView.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\View\Editors\EMP\EmpNodeView.xaml.cs">
       <Link>Views\EEPK Organiser\View\Editors\EMP\EmpNodeView.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\View\Editors\EMP\EmpTextureView.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\View\Editors\EMP\EmpTextureView.xaml.cs">
       <Link>Views\EEPK Organiser\View\Editors\EMP\EmpTextureView.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\View\Editors\EMP\KeyframedValueView.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\View\Editors\EMP\KeyframedValueView.xaml.cs">
       <Link>Views\EEPK Organiser\View\Editors\EMP\KeyframedValueView.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\View\Editors\EtrEditor.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\View\Editors\EtrEditor.xaml.cs">
       <Link>Views\EEPK Organiser\View\Editors\EtrEditor.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\View\Editors\MaterialsEditor.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\View\Editors\MaterialsEditor.xaml.cs">
       <Link>Views\EEPK Organiser\View\Editors\MaterialsEditor.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\View\Editors\TextureEditor.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\View\Editors\TextureEditor.xaml.cs">
       <Link>Views\EEPK Organiser\View\Editors\TextureEditor.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\View\EepkEditor.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\View\EepkEditor.xaml.cs">
       <Link>Views\EEPK Organiser\View\EepkEditor.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\View\Vectors\CustomColor.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\View\Vectors\CustomColor.xaml.cs">
       <Link>Views\EEPK Organiser\View\Vectors\CustomColor.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\View\Vectors\CustomMatUV.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\View\Vectors\CustomMatUV.xaml.cs">
       <Link>Views\EEPK Organiser\View\Vectors\CustomMatUV.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\View\Vectors\CustomRgbColor.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\View\Vectors\CustomRgbColor.xaml.cs">
       <Link>Views\EEPK Organiser\View\Vectors\CustomRgbColor.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\View\Vectors\CustomVector2.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\View\Vectors\CustomVector2.xaml.cs">
       <Link>Views\EEPK Organiser\View\Vectors\CustomVector2.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\View\Vectors\CustomVector3.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\View\Vectors\CustomVector3.xaml.cs">
       <Link>Views\EEPK Organiser\View\Vectors\CustomVector3.xaml.cs</Link>
     </Compile>
-    <Compile Include="..\..\XV2 Tools\EEPK Editor\View\Vectors\CustomVector4.xaml.cs">
+    <Compile Include="..\..\XV2-Tools\EEPK Editor\View\Vectors\CustomVector4.xaml.cs">
       <Link>Views\EEPK Organiser\View\Vectors\CustomVector4.xaml.cs</Link>
     </Compile>
     <Compile Include="DialogSettings.cs" />
@@ -835,217 +835,217 @@
     <Compile Include="Windows\Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
-    <Page Include="..\..\XV2 Tools\AudioCueEditor\View\AddCueForm.xaml">
+    <Page Include="..\..\XV2-Tools\AudioCueEditor\View\AddCueForm.xaml">
       <Link>Views\ACE\View\AddCueForm.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\AudioCueEditor\View\AddTrackForm.xaml">
+    <Page Include="..\..\XV2-Tools\AudioCueEditor\View\AddTrackForm.xaml">
       <Link>Views\ACE\View\AddTrackForm.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\AudioCueEditor\View\CueEditorView.xaml">
+    <Page Include="..\..\XV2-Tools\AudioCueEditor\View\CueEditorView.xaml">
       <Link>Views\ACE\View\CueEditorView.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\AudioCueEditor\View\EditCueLimit.xaml">
+    <Page Include="..\..\XV2-Tools\AudioCueEditor\View\EditCueLimit.xaml">
       <Link>Views\ACE\View\EditCueLimit.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\AudioCueEditor\View\EditLoopForm.xaml">
+    <Page Include="..\..\XV2-Tools\AudioCueEditor\View\EditLoopForm.xaml">
       <Link>Views\ACE\View\EditLoopForm.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\AudioCueEditor\View\EditVolume.xaml">
+    <Page Include="..\..\XV2-Tools\AudioCueEditor\View\EditVolume.xaml">
       <Link>Views\ACE\View\EditVolume.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\AudioCueEditor\View\VolumeControl.xaml">
+    <Page Include="..\..\XV2-Tools\AudioCueEditor\View\VolumeControl.xaml">
       <Link>Views\ACE\View\VolumeControl.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\Forms\AssetContainerSettings.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\Forms\AssetContainerSettings.xaml">
       <Link>Views\EEPK Organiser\Forms\AssetContainerSettings.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\Forms\AssetSelector.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\Forms\AssetSelector.xaml">
       <Link>Views\EEPK Organiser\Forms\AssetSelector.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\Forms\Editors\EcfEditorWindow.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\Forms\Editors\EcfEditorWindow.xaml">
       <Link>Views\EEPK Organiser\Forms\Editors\EcfEditorWindow.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\Forms\Editors\EmbEditForm.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\Forms\Editors\EmbEditForm.xaml">
       <Link>Views\EEPK Organiser\Forms\Editors\EmbEditForm.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\Forms\Editors\EmpEditorWindow.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\Forms\Editors\EmpEditorWindow.xaml">
       <Link>Views\EEPK Organiser\Forms\Editors\EmpEditorWindow.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\Forms\Editors\EtrEditorWindow.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\Forms\Editors\EtrEditorWindow.xaml">
       <Link>Views\EEPK Organiser\Forms\Editors\EtrEditorWindow.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\Forms\Editors\MaterialsEditorForm.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\Forms\Editors\MaterialsEditorForm.xaml">
       <Link>Views\EEPK Organiser\Forms\Editors\MaterialsEditorForm.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\Forms\EffectSelector.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\Forms\EffectSelector.xaml">
       <Link>Views\EEPK Organiser\Forms\EffectSelector.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\Forms\EntitySelector.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\Forms\EntitySelector.xaml">
       <Link>Views\EEPK Organiser\Forms\EntitySelector.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\Forms\EtrScale.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\Forms\EtrScale.xaml">
       <Link>Views\EEPK Organiser\Forms\EtrScale.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\Forms\LogForm.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\Forms\LogForm.xaml">
       <Link>Views\EEPK Organiser\Forms\LogForm.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\Forms\LogPrompt.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\Forms\LogPrompt.xaml">
       <Link>Views\EEPK Organiser\Forms\LogPrompt.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\Forms\Recolor\RecolorAll.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\Forms\Recolor\RecolorAll.xaml">
       <Link>Views\EEPK Organiser\Forms\Recolor\RecolorAll.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\Forms\Recolor\RecolorAll_HueSet.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\Forms\Recolor\RecolorAll_HueSet.xaml">
       <Link>Views\EEPK Organiser\Forms\Recolor\RecolorAll_HueSet.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\Forms\Recolor\RecolorTexture_HueSet.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\Forms\Recolor\RecolorTexture_HueSet.xaml">
       <Link>Views\EEPK Organiser\Forms\Recolor\RecolorTexture_HueSet.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\Forms\Recolor\TextureEditHueChange.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\Forms\Recolor\TextureEditHueChange.xaml">
       <Link>Views\EEPK Organiser\Forms\Recolor\TextureEditHueChange.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\Forms\RenameForm.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\Forms\RenameForm.xaml">
       <Link>Views\EEPK Organiser\Forms\RenameForm.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\View\Controls\ShapeDraw.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\View\Controls\ShapeDraw.xaml">
       <Link>Views\EEPK Organiser\View\Controls\ShapeDraw.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\View\Editors\EcfEditor.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\View\Editors\EcfEditor.xaml">
       <Link>Views\EEPK Organiser\View\Editors\EcfEditor.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\View\Editors\EmpEditor.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\View\Editors\EmpEditor.xaml">
       <Link>Views\EEPK Organiser\View\Editors\EmpEditor.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\View\Editors\EMP\EmpKeyframesView.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\View\Editors\EMP\EmpKeyframesView.xaml">
       <Link>Views\EEPK Organiser\View\Editors\EMP\EmpKeyframesView.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\View\Editors\EMP\EmpKeyframeView.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\View\Editors\EMP\EmpKeyframeView.xaml">
       <Link>Views\EEPK Organiser\View\Editors\EMP\EmpKeyframeView.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\View\Editors\EMP\EmpModifiersView.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\View\Editors\EMP\EmpModifiersView.xaml">
       <Link>Views\EEPK Organiser\View\Editors\EMP\EmpModifiersView.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\View\Editors\EMP\EmpNodeView.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\View\Editors\EMP\EmpNodeView.xaml">
       <Link>Views\EEPK Organiser\View\Editors\EMP\EmpNodeView.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\View\Editors\EMP\EmpTextureView.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\View\Editors\EMP\EmpTextureView.xaml">
       <Link>Views\EEPK Organiser\View\Editors\EMP\EmpTextureView.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\View\Editors\EMP\KeyframedValueView.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\View\Editors\EMP\KeyframedValueView.xaml">
       <Link>Views\EEPK Organiser\View\Editors\EMP\KeyframedValueView.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\View\Editors\EtrEditor.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\View\Editors\EtrEditor.xaml">
       <Link>Views\EEPK Organiser\View\Editors\EtrEditor.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\View\Editors\MaterialsEditor.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\View\Editors\MaterialsEditor.xaml">
       <Link>Views\EEPK Organiser\View\Editors\MaterialsEditor.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\View\Editors\TextureEditor.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\View\Editors\TextureEditor.xaml">
       <Link>Views\EEPK Organiser\View\Editors\TextureEditor.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\View\EepkEditor.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\View\EepkEditor.xaml">
       <Link>Views\EEPK Organiser\View\EepkEditor.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\View\Vectors\CustomColor.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\View\Vectors\CustomColor.xaml">
       <Link>Views\EEPK Organiser\View\Vectors\CustomColor.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\View\Vectors\CustomMatUV.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\View\Vectors\CustomMatUV.xaml">
       <Link>Views\EEPK Organiser\View\Vectors\CustomMatUV.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\View\Vectors\CustomRgbColor.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\View\Vectors\CustomRgbColor.xaml">
       <Link>Views\EEPK Organiser\View\Vectors\CustomRgbColor.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\View\Vectors\CustomVector2.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\View\Vectors\CustomVector2.xaml">
       <Link>Views\EEPK Organiser\View\Vectors\CustomVector2.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\View\Vectors\CustomVector3.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\View\Vectors\CustomVector3.xaml">
       <Link>Views\EEPK Organiser\View\Vectors\CustomVector3.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\XV2 Tools\EEPK Editor\View\Vectors\CustomVector4.xaml">
+    <Page Include="..\..\XV2-Tools\EEPK Editor\View\Vectors\CustomVector4.xaml">
       <Link>Views\EEPK Organiser\View\Vectors\CustomVector4.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -1328,15 +1328,15 @@
     <Resource Include="Resources\transparent_checkerboard.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.WindowsDX.csproj">
+    <ProjectReference Include="..\MonoGame\MonoGame.Framework\MonoGame.Framework.WindowsDX.csproj">
       <Project>{e75f2be2-787a-4a7a-927d-d0f06b10472c}</Project>
       <Name>MonoGame.Framework.WindowsDX</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\XV2 Tools\LB_Common\LB_Common.csproj">
+    <ProjectReference Include="..\..\XV2-Tools\LB_Common\LB_Common.csproj">
       <Project>{513b1851-4576-45ec-8f8e-400a38b05502}</Project>
       <Name>LB_Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\XV2 Tools\Xv2CoreLib\Xv2CoreLib.csproj">
+    <ProjectReference Include="..\..\XV2-Tools\Xv2CoreLib\Xv2CoreLib.csproj">
       <Project>{fdb88e51-0d73-47b9-a342-e574ec0ba583}</Project>
       <Name>Xv2CoreLib</Name>
     </ProjectReference>
