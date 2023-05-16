@@ -52,6 +52,10 @@ namespace XenoKit.Engine.Scripting.BAC
         /// The currently active eye movement entry. Only one of these can be active at any given time.
         /// </summary>
         public BAC_Type21 ActiveEyeMovement = null;
+        /// <summary>
+        /// Acts as the duration of how long the face animation in the currently active main animation can be played.
+        /// </summary>
+        public int MainFaceAnimationEndTime = -1;
 
         public BacEntryInstance(BAC_File bacFile, BAC_Entry bacEntry, Move currentMove, Actor user, bool revertPosition, Matrix originalMatrix)
         {
@@ -125,11 +129,11 @@ namespace XenoKit.Engine.Scripting.BAC
             bool hasTimeScale = false;
             float scaledDuration = currentStartTime + currentAnimDuration;
 
-            foreach(var type in BacEntry.IBacTypes)
+            foreach (var type in BacEntry.IBacTypes)
             {
-                if(type is BAC_Type0 type0)
+                if (type is BAC_Type0 type0)
                 {
-                    if(type0.TimeScale != 1f)
+                    if (type0.TimeScale != 1f)
                     {
                         scaledDuration -= type0.CachedActualDuration;
                         scaledDuration += type0.CachedActualDuration / type0.TimeScale;
@@ -137,7 +141,7 @@ namespace XenoKit.Engine.Scripting.BAC
                     }
                 }
 
-                if(type is BAC_Type4 timeScale)
+                if (type is BAC_Type4 timeScale)
                 {
                     scaledDuration -= timeScale.Duration;
                     scaledDuration += timeScale.Duration / timeScale.TimeScale;
@@ -149,7 +153,7 @@ namespace XenoKit.Engine.Scripting.BAC
             ScaledDuration = scaledDuration;
             HasTimeScale = hasTimeScale;
         }
-    
+
         public void Update()
         {
             InScope = CurrentFrame < Duration;
@@ -195,11 +199,11 @@ namespace XenoKit.Engine.Scripting.BAC
 
         private void DetermineActionState()
         {
-            if(CurrentFrame >= 0 && CurrentFrame < Duration)
+            if (CurrentFrame >= 0 && CurrentFrame < Duration)
             {
                 SetActionState(ActionSimulationState.SimulationActive);
             }
-            else if(CurrentFrame >= Duration && SimulationEntities.Count == 0)
+            else if (CurrentFrame >= Duration && SimulationEntities.Count == 0)
             {
                 SetActionState(ActionSimulationState.SimulationEnded);
             }
@@ -213,18 +217,19 @@ namespace XenoKit.Engine.Scripting.BAC
         {
             SimulationState = state;
 
-            if(state == ActionSimulationState.DurationElapsed || state == ActionSimulationState.SimulationEnded)
+            if (state == ActionSimulationState.DurationElapsed || state == ActionSimulationState.SimulationEnded)
             {
                 ActionStoppedEvent?.Invoke(this, new ActionStoppedEventArgs(state));
             }
         }
-    
+
         public void ResetState()
         {
             ActionStoppedEvent?.Invoke(this, new ActionStoppedEventArgs(ActionSimulationState.SimulationEnded));
 
             SimulationState = ActionSimulationState.SimulationActive;
             ActiveEyeMovement = null;
+            MainFaceAnimationEndTime = -1;
             CurrentFrame = 0;
             PreviousFrame = 0;
         }
