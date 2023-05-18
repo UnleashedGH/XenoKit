@@ -16,6 +16,7 @@ namespace XenoKit.Engine.Audio
         
         //State
         public bool IsFinished { get; private set; }
+
         //World object that the sound plays on, if 3D_Def is enabled.
         private Entity entity = null;
         private bool _3d_Def = false;
@@ -32,19 +33,20 @@ namespace XenoKit.Engine.Audio
             wavePlayer.PlaybackStopped += WavePlayer_PlaybackStopped;
         }
 
-        //Calculate appropiate volume based of the camera distance from the current active entity
-        public void CalculateVolume()
+        //Update
+        public void Update()
         {
             if (wavePlayer == null || CurrentWav == null) return;
-
 
             if (_3d_Def && entity != null)
             {
                 //Stupid approximation for now
                 float distance = Vector3.Distance(SceneManager.MainCamera.CameraState.Position, entity.Transform.Translation);
+
+                //BUG: This sets the devices output volume, which causes the choppy audio with multiple sounds playing
                 if (distance < 1f)
                 {
-                    if (wavePlayer.Volume != 1f)
+                    if(wavePlayer.Volume != 1f)
                         wavePlayer.Volume = volume;
                 }
                 else
@@ -52,15 +54,12 @@ namespace XenoKit.Engine.Audio
                     float volTemp = (volume / distance) * 2;
                     float volFinal = (volTemp > 1f) ? 1f : volTemp;
 
-                    ////Update volume only if it is sufficently different.
-                    //if (Math.Abs(wavePlayer.Volume - volFinal) > 0.001f)
-                    wavePlayer.Volume = volFinal;
-
+                    //Update volume only if it is sufficently different.
+                    if(Math.Abs(wavePlayer.Volume - volFinal) > 0.001f)
+                        wavePlayer.Volume = volFinal;
                 }
 
             }
-
-
         }
 
         //Set Audio
@@ -82,8 +81,6 @@ namespace XenoKit.Engine.Audio
                 //await Task.Run(() => wav = HCA.DecodeToWavStream(awbEntry.bytes));
             }
 
-     
-
             if (wavePlayer.PlaybackState != PlaybackState.Stopped)
                 wavePlayer.Stop();
 
@@ -93,15 +90,14 @@ namespace XenoKit.Engine.Audio
 
             //Load wav
             await Task.Run(() => wavePlayer.Init(wav.waveStream));
-
+            
 
             //Initial volume
+            wavePlayer.Volume = volume;
             this.volume = volume;
-            CalculateVolume();
-
 
             //Set loop
-            if (meta.HasLoopData)
+            if(meta.HasLoopData)
             {
                 SetLoop(meta.LoopStartMs, meta.LoopEndMs);
             }
