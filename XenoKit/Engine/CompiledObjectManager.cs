@@ -15,19 +15,24 @@ using Xv2CoreLib.ESK;
 
 namespace XenoKit.Engine
 {
-    public class CompiledObjectManager
+    public class CompiledObjectManager : IDisposable
     {
-        #region Singleton
-        private static Lazy<CompiledObjectManager> instance = new Lazy<CompiledObjectManager>(() => new CompiledObjectManager());
-        public static CompiledObjectManager Instance => instance.Value;
+        private readonly Dictionary<object, CompiledObjectCacheEntry> CachedObjects = new Dictionary<object, CompiledObjectCacheEntry>();
 
-        private CompiledObjectManager()
+        public CompiledObjectManager()
         {
+            SceneManager.SlowUpdate += SceneManager_SlowUpdate;
         }
-        #endregion
 
-        private List<CompiledObjectCacheEntry> CachedObjects = new List<CompiledObjectCacheEntry>();
+        private void SceneManager_SlowUpdate(object sender, EventArgs e)
+        {
+            RemoveDeadObjects();
+        }
 
+        public void Dispose()
+        {
+            SceneManager.SlowUpdate -= SceneManager_SlowUpdate;
+        }
 
         #region AddGet
         /// <summary>
@@ -36,65 +41,92 @@ namespace XenoKit.Engine
         /// <typeparam name="T">The compiled object type</typeparam>
         /// <param name="key">The source object</param>
         /// <returns></returns>
-        public T GetCompiledObject<T>(object key, GameBase gameInstance) where T : class
+        public T GetCompiledObject<T>(object key, GameBase gameInstance, bool firstAttempt = true) where T : class
         {
-            RemoveDeadObjects();
             if (key == null) return null;
 
-            CompiledObjectCacheEntry cacheEntry = CachedObjects.FirstOrDefault(x => x.CompareKey(key) && x.GameInstance == gameInstance);
-
-            object result = cacheEntry?.CachedObject?.Target;
-
-            if(result == null)
+            lock (CachedObjects)
             {
-                if (typeof(T) == typeof(Xv2ShaderEffect) && key is EmmMaterial material)
+
+                CachedObjects.TryGetValue(key, out CompiledObjectCacheEntry cacheEntry);
+
+                object result = cacheEntry?.CachedObject?.Target;
+
+                if (cacheEntry?.IsAlive() == false)
+                    RemoveDeadObjects();
+
+                if (result == null)
                 {
-                    result = new Xv2ShaderEffect(material, gameInstance);
-                }
-                else if (typeof(T) == typeof(Xv2Texture) && key is EmbEntry embEntry)
-                {
-                    result = new Xv2Texture(embEntry, gameInstance);
-                }
-                else if (typeof(T) == typeof(Xv2ModelFile) && key is EMD_File emdFile)
-                {
-                    result = Xv2ModelFile.LoadEmd(gameInstance, emdFile);
-                }
-                else if (typeof(T) == typeof(Xv2ModelFile) && key is EMO_File emoFile)
-                {
-                    result = Xv2ModelFile.LoadEmo(gameInstance, emoFile);
-                }
-                else if (typeof(T) == typeof(Animation.Xv2Skeleton) && key is ESK_File eskFile)
-                {
-                    result = new Animation.Xv2Skeleton(eskFile);
-                }
-                else if (typeof(T) == typeof(Animation.Xv2Skeleton) && key is Skeleton emoSkeleton)
-                {
-                    result = new Animation.Xv2Skeleton(emoSkeleton);
-                }
-                else if (typeof(T) == typeof(Vfx.Particle.ParticleEmissionData) && key is ParticleNode particleNode)
-                {
-                    result = new Vfx.Particle.ParticleEmissionData(particleNode, gameInstance);
-                }
-                else
-                {
-                    Log.Add($"GetCompiledObject<{typeof(T)}>: key and source combination not valid (source: {key.GetType()}).", LogType.Error);
-                    return null;
+                    if (typeof(T) == typeof(Xv2ShaderEffect) && key is EmmMaterial material)
+                    {
+                        result = new Xv2ShaderEffect(material, gameInstance);
+                    }
+                    else if (typeof(T) == typeof(Xv2Texture) && key is EmbEntry embEntry)
+                    {
+                        result = new Xv2Texture(embEntry, gameInstance);
+                    }
+                    else if (typeof(T) == typeof(Xv2ModelFile) && key is EMD_File emdFile)
+                    {
+                        result = Xv2ModelFile.LoadEmd(gameInstance, emdFile);
+                    }
+                    else if (typeof(T) == typeof(Xv2ModelFile) && key is EMO_File emoFile)
+                    {
+                        result = Xv2ModelFile.LoadEmo(gameInstance, emoFile);
+                    }
+                    else if (typeof(T) == typeof(Animation.Xv2Skeleton) && key is ESK_File eskFile)
+                    {
+                        result = new Animation.Xv2Skeleton(eskFile);
+                    }
+                    else if (typeof(T) == typeof(Animation.Xv2Skeleton) && key is Skeleton emoSkeleton)
+                    {
+                        result = new Animation.Xv2Skeleton(emoSkeleton);
+                    }
+                    else if (typeof(T) == typeof(Vfx.Particle.ParticleEmissionData) && key is ParticleNode particleNode)
+                    {
+                        result = new Vfx.Particle.ParticleEmissionData(particleNode, gameInstance);
+                    }
+                    else
+                    {
+                        Log.Add($"GetCompiledObject<{typeof(T)}>: key and source combination not valid (source: {key.GetType()}).", LogType.Error);
+                        return null;
+                    }
+
+
+                    //Wacky thread safe guard
+                    if (firstAttempt)
+                    {
+                        try
+                        {
+                            CachedObjects.Add(key, new CompiledObjectCacheEntry(key, result, gameInstance));
+                        }
+                        catch
+                        {
+                            return GetCompiledObject<T>(key, gameInstance, false);
+                        }
+                    }
+                    else
+                    {
+                        CachedObjects.Add(key, new CompiledObjectCacheEntry(key, result, gameInstance));
+                    }
                 }
 
-                CachedObjects.Add(new CompiledObjectCacheEntry(key, result, gameInstance));
+                return result as T;
             }
 
-            return result as T;
         }
 
         private void RemoveDeadObjects()
         {
-            int removed = CachedObjects.RemoveAll(x => !x.IsAlive());
+            int removed = 0;
+
+            foreach (KeyValuePair<object, CompiledObjectCacheEntry> item in CachedObjects.Where(x => !x.Value.IsAlive()).ToList())
+            {
+                CachedObjects.Remove(item.Key);
+                removed++;
+            }
 
             if(removed > 0)
-            {
-                Log.Add($"Removed {removed} dead objects.", LogType.Debug);
-            }
+                Log.Add($"Removed {removed} dead objects", LogType.Debug);
         }
 
         #endregion
@@ -102,9 +134,9 @@ namespace XenoKit.Engine
         #region ModelFunctions
         public void UnsetActorOnModels(int actor)
         {
-            foreach(var model in CachedObjects.Where(x => x.IsOfType(typeof(Xv2ModelFile))))
+            foreach(KeyValuePair<object, CompiledObjectCacheEntry> model in CachedObjects.Where(x => x.Value.IsOfType(typeof(Xv2ModelFile))))
             {
-                if(model.CachedObject.Target is Xv2ModelFile xv2Model)
+                if(model.Value.CachedObject.Target is Xv2ModelFile xv2Model)
                 {
                     xv2Model.UnsetActor(actor);
                 }
@@ -116,7 +148,7 @@ namespace XenoKit.Engine
         {
             foreach(var obj in CachedObjects)
             {
-                if (obj.CachedObject.IsAlive && obj.CachedObject.Target is Xv2ShaderEffect shader)
+                if (obj.Value.CachedObject.IsAlive && obj.Value.CachedObject.Target is Xv2ShaderEffect shader)
                 {
                     shader.InitTechnique();
                 }
